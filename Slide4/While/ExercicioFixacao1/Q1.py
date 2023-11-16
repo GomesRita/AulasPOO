@@ -6,10 +6,9 @@ solicite um número e apresente o resultado do seu fatorial.
 """
 
 num = int(input("Informe um número: "))
-
+fatorial = 1
 while num > 1:
-    fatorial = num*(num -1)
+    fatorial = fatorial * num 
     num = num - 1
-    print(num)
-    if num == 1:
-        print(fatorial)
+print(fatorial)
+
