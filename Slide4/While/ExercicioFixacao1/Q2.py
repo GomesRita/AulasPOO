@@ -5,8 +5,11 @@ devem ser INSATISFEITO; SATISFEITO; NÃO QUERO RESPONDER. O
 algoritmo deverá ainda perguntar quantas usuários irão responder à
 pergunta. Ao final apresentar o percentual de resposta de cada opção.
 """
-qntd = int(input("Quantas pessoas irão responder a esta pesquisa: " ))
 lista = []
+cont_Insatisfeito = 0
+cont_Satisfeito = 0
+qntd = int(input("Quantas pessoas irão responder a esta pesquisa: " ))
+cont_NQR = 0
 while qntd >= 1:
     print (''' 
 Pesquisa de satisfação:
@@ -26,4 +29,14 @@ Pesquisa de satisfação:
         lista.append(opniao)
         print("Resposta enviada")
 
-print(lista)
+for i in lista:
+    if lista[i] == 1:
+        cont_Insatisfeito = cont_Insatisfeito + 1
+    if lista[i] == 2:
+        cont_Satisfeito = cont_Satisfeito + 1
+    if lista[i] == 3:
+        cont_NQR = cont_NQR +1
+
+print("Insatisfeitos: " + str(cont_Insatisfeito) )
+print("Satisfeitos: " + str(cont_Satisfeito))
+print("Não quero responder: " + str(cont_NQR))

@@ -1,7 +1,9 @@
 class Carro:
-    modelo = ''
-    cor = ''
-    marca = ''
+    
+    def __init__ (self, modelo, cor, marca):
+     modelo = modelo
+     cor = cor
+     marca = marca
 
     def ligar(self):
          print('Carro ligado')
@@ -16,4 +18,7 @@ class Carro:
          print('Freando!')
     
 carro = Carro()
+carro2 = Carro
 carro.ligar()
+print(id(carro))
+print(id(carro2))

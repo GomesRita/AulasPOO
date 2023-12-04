@@ -6,8 +6,10 @@ que faça um teste demonstrativo do funcionamento da mesma.
 """
 
 class Cachorro:
-    raca = ''
-    porte = ''
+
+    def __init__(self,raca, porte):
+        raca = raca
+        porte = porte
 
     def latir(self):
         print("Au Au Au")
